@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Camion {
     private final int id;
     private final int capaciteMin;
@@ -44,11 +42,12 @@ public class Camion {
     }
 
     public int charger(int maxDisponible) {
-        int difference = Math.min(capaciteMax, maxDisponible) - capaciteMin + 1;
-        int random = 0;
-        if (difference > 0) {
-            random += new Random().nextInt(difference);
-        }
-        return random + capaciteMin;
+        return Math.min(capaciteMax, maxDisponible);
+//        int difference = Math.min(capaciteMax, maxDisponible) - capaciteMin + 1;
+//        int random = 0;
+//        if (difference > 0) {
+//            random += new Random().nextInt(difference);
+//        }
+//        return random + capaciteMin;
     }
 }

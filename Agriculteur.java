@@ -25,6 +25,10 @@ public class Agriculteur {
         this.jourActuel = 1; // Commence à lundi
     }
 
+    public int getId() {
+        return id;
+    }
+
     private Set<Integer> calculerJoursLivraison() {
         Set<Integer> jours = new HashSet<>();
         int intervalle = 7 / frequenceLivraison; // Espacement idéal entre livraisons
@@ -43,10 +47,6 @@ public class Agriculteur {
         boolean doitLivrer = joursLivraison.contains(jourActuel);
         jourActuel = (jourActuel % 7) + 1; // Passer au jour suivant
         return doitLivrer;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public int livrer() {
