@@ -39,6 +39,6 @@ La simulation doit enregistrer un log pour chaque livraison dans l'entrepôt ou 
    cd votre-repertoire
 2. Compilez et exécutez le projet en utilisant votre IDE Java préféré ou en ligne de commande :
    ```bash
-    javac Main.java
-    java Main
+    javac Simulation.java
+    java Simulation
 3. Consultez les logs de la simulation pour analyser les livraisons et les expéditions.
