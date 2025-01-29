@@ -1,2 +1,5 @@
 # IDE et éditeur
 .idea/
+
+# Dossier de log
+out/
