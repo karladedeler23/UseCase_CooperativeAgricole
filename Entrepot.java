@@ -17,7 +17,7 @@ public class Entrepot {
             return -1;
         } else if (stockActuel + taille > tailleMax) {
             int qteAcceptee = tailleMax - stockActuel;
-            int qteRefusee = taille - qteAcceptee;
+            //int qteRefusee = taille - qteAcceptee;
             stockActuel = tailleMax;
             //System.out.println("Livraison partiellement rejetée : accepte " + qteAcceptee + " mais rejette " + qteRefusee + ".");
             return qteAcceptee;

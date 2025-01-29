@@ -4,16 +4,14 @@ import java.util.Set;
 
 public class Agriculteur {
     private final int id;
-    private final String nom;
     private final int frequenceLivraison; // Nombre de livraisons par semaine
     private final int tailleLivraisonMin;
     private final int tailleLivraisonMax;
-    private Set<Integer> joursLivraison; // Jours de livraison dans la semaine (1 = lundi, 7 = dimanche)
+    private final Set<Integer> joursLivraison; // Jours de livraison dans la semaine (1 = lundi, 7 = dimanche)
     private int jourActuel; // Compteur pour suivre les jours de la semaine
 
-    public Agriculteur(int id, String nom, int frequenceLivraison, int tailleLivraisonMin, int tailleLivraisonMax) {
+    public Agriculteur(int id, int frequenceLivraison, int tailleLivraisonMin, int tailleLivraisonMax) {
         this.id = id;
-        this.nom = nom;
 
         // Vérification de la fréquence (doit être entre 1 et 5)
         if (frequenceLivraison < 1 || frequenceLivraison > 5) {
@@ -49,11 +47,6 @@ public class Agriculteur {
 
     public int getId() {
         return id;
-    }
-
-    private int calculerIntervalle() {
-        // Intervalle en jours entre deux livraisons
-        return 7 / frequenceLivraison - 1;
     }
 
     public int livrer() {

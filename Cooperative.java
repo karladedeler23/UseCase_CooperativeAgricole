@@ -5,8 +5,8 @@ public class Cooperative {
         // Initialisation
         Entrepot entrepot = new Entrepot(150);
         List<Agriculteur> agriculteurs = Arrays.asList(
-                new Agriculteur(1, "Agriculteur 1", 3, 50, 150),
-                new Agriculteur(2, "Agriculteur 2", 5, 30, 100)
+                new Agriculteur(1, 3, 50, 150),
+                new Agriculteur(2, 5, 30, 100)
         );
         List<Camion> camions = Arrays.asList(
                 new Camion(1, 50, 100),
